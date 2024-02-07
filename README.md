@@ -38,7 +38,8 @@ after that, you can start using this template and edit as you like!
 1. JWT Auth Session hooks
 2. Replace ESLint with BiomeJS
 3. Data Table Example
-4. Tanstack Path Params Usage
+4. Form Example
+5. Tanstack Path Params Usage
 
 If you have any inputs or suggestions, add them as an [Issues](https://github.com/FelixFern/React-Starter-Project/issues) and we'll discuss them!
 
