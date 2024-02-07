@@ -29,6 +29,7 @@ export const Route = createRootRoute({
                         <Link
                             to='/pokemon'
                             className='[&.active]:border-b-2 [&.active]:text-red-500 pb-1 border-red-500'
+                            search
                         >
                             <NavigationMenuLink>Pokemon</NavigationMenuLink>
                         </Link>

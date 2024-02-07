@@ -1,13 +1,22 @@
+import {
+    Pagination,
+    PaginationContent,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious
+} from "@/components/ui/pagination";
+import { Skeleton } from "@/components/ui/skeleton";
 import { GetAllPokemonParams } from "@/types";
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import PokemonCard from "./-components/PokemonCard";
-import { usePokemonData } from "./-hooks/usePokemonData";
+import { usePokemonImpl } from "./-usePokemonImpl";
 
 export const Route = createFileRoute("/pokemon/")({
     component: Pokemon,
     validateSearch: (search: Record<string, unknown>): GetAllPokemonParams => {
         return {
-            limit: (search.limit as number) ?? 20,
+            limit: (search.limit as number) ?? 15,
             offset: (search.offset as number) ?? 0
         };
     }
@@ -15,17 +24,60 @@ export const Route = createFileRoute("/pokemon/")({
 
 function Pokemon() {
     const params = Route.useSearch();
-    const { data, isLoading } = usePokemonData({ params });
 
-    if (isLoading) {
-        return <>Loading Data...</>;
-    }
+    const { data, isLoading } = usePokemonImpl({ params });
+
     return (
         <>
-            <h1 className='text-xl font-bold'>Pokemon List</h1>
-            <div className='flex flex-col gap-4 mt-4'>
-                {data?.results.map((pokemon) => <PokemonCard {...pokemon} />)}
-            </div>
+            {isLoading ? (
+                <div className='grid grid-cols-5 gap-4 mb-6'>
+                    {Array(15)
+                        .fill(0)
+                        .map(() => (
+                            <Skeleton className='w-full aspect-square' />
+                        ))}
+                </div>
+            ) : (
+                <div className='grid grid-cols-5 gap-4 mb-6'>
+                    {data?.results.map((pokemon) => (
+                        <PokemonCard {...pokemon} key={pokemon.name} />
+                    ))}
+                </div>
+            )}
+
+            <Pagination>
+                <PaginationContent>
+                    <PaginationItem>
+                        <Link
+                            href='#'
+                            search={{
+                                ...params,
+                                offset: params.offset - params.limit
+                            }}
+                            disabled={params.offset === 0}
+                        >
+                            <PaginationPrevious />
+                        </Link>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <PaginationLink href='#' isActive>
+                            {params.offset / params.limit + 1}
+                        </PaginationLink>
+                    </PaginationItem>
+                    <PaginationItem>
+                        <Link
+                            href='#'
+                            disabled={params.offset === data?.count}
+                            search={{
+                                ...params,
+                                offset: params.offset + params.limit
+                            }}
+                        >
+                            <PaginationNext href='#' />
+                        </Link>
+                    </PaginationItem>
+                </PaginationContent>
+            </Pagination>
         </>
     );
 }
