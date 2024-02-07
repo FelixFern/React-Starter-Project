@@ -42,7 +42,10 @@ git clone https://github.com/FelixFern/React-Starter-Project
 pnpm install
 ```
 
-3. After that, you can start using this template and edit as you like!
+3. After that, you can start using this template and edit as you like! and to start the project use 
+```
+pnpm run dev
+```
 
 ## 🟩 Examples Included 
 1. Fetching Data Example ✅
