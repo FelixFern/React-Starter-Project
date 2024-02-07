@@ -1,30 +1,43 @@
 # React Starter Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working in Vite to build your app with ease and fast, this template provides you with clean React project directories to give you the best DX when developing a frontend application.
 
-Currently, two official plugins are available:
+<div style={{display: "flex"; column-gap:"1rem", justify-content: "center", margin-top: "1rem"}}>
+  <img width="500" alt="image" src="https://github.com/FelixFern/React-Starter-Project/assets/28957554/ffc1a46a-cbcd-4083-81a1-a69ced8758d9">
+  <img width="500" alt="image" src="https://github.com/FelixFern/React-Starter-Project/assets/28957554/ac4876e5-0b9f-4190-af42-7573924c104a">
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Dependencies Used
+- Tanstack Router (for Routing): https://tanstack.com/router/latest
+- Tanstack Query (Data Fetching): https://tanstack.com/router/latest
+- Tailwind CSS (CSS Alternative): https://tailwindcss.com/
+- Shadcn (Component Library): https://ui.shadcn.com/
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## How to use
+To use this starter project, start by cloning this repository 
 ```
+git clone https://github.com/FelixFern/React-Starter-Project
+```
+after that, you can start using this template!
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Example Included
+1. Fetching Data Example
+2. Data Pagination Example
+3. Routing
+4. Tanstack Router Params Usage
+5. Custom Hooks
+
+## Next Improvement
+1. Replace ESLint with BiomeJS
+2. Data Table Example
+3. Tanstack Path Params Usage
+
+More to come..
+
+## Credits
+[Pokemon APIs](https://pokeapi.co/) by Paul Hallet
+
+## Maintained by 
+[@ Felix Fernando](https://github.com/FelixFern) contact me for any improvement or inputs!
