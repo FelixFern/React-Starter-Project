@@ -10,7 +10,7 @@ import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 export const Route = createRootRoute({
     component: () => (
         <>
-            <NavigationMenu className='fixed p-4 h-fit'>
+            <NavigationMenu className='p-4 h-fit'>
                 <NavigationMenuList className='flex items-center gap-4'>
                     <NavigationMenuItem>
                         <h1 className='font-bold text-md'>
@@ -18,14 +18,27 @@ export const Route = createRootRoute({
                         </h1>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link to='/'>
+                        <Link
+                            to='/'
+                            className='[&.active]:border-b-2 [&.active]:text-red-500 pb-1 border-red-500'
+                        >
                             <NavigationMenuLink>Home</NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link
+                            to='/pokemon'
+                            className='[&.active]:border-b-2 [&.active]:text-red-500 pb-1 border-red-500'
+                        >
+                            <NavigationMenuLink>Pokemon</NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
             <hr />
-            <Outlet />
+            <div className='container pt-12'>
+                <Outlet />
+            </div>
             <TanStackRouterDevtools />
         </>
     )
