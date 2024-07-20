@@ -22,11 +22,8 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       - name: Install Dependencies
-        run: pnpm
+        run: npm
 
       - name: Run Linter
-        run: pnpm lint
+        run: npm lint
