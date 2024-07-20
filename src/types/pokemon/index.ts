@@ -1,2 +1,2 @@
-export * from "./getAll";
-export * from "./getByName";
+export * from './getAll';
+export * from './getByName';

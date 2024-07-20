@@ -12,9 +12,11 @@ This template provides a minimal setup to get React working in Vite to build you
 </div>
 
 ## Pre-requisite
+
 - Node.js v18.16 and up with package manager (npm, yarn, or pnpm)
 
 ## Dependencies Used
+
 - React v18.2.0 with Typescript
 - Axios (for Data Fetching)
 - Tanstack Router (for Routing): https://tanstack.com/router/latest
@@ -22,12 +24,9 @@ This template provides a minimal setup to get React working in Vite to build you
 - Tailwind CSS (CSS Alternative): https://tailwindcss.com/
 - Shadcn (Component Library): https://ui.shadcn.com/
 
-
-
 ## How to use
 
 1. Click the "Use this template" button and select "Create a new repository", after that you can change the name of the project as you like
-
 
 <img width="1547" alt="Screenshot 2024-02-07 at 20 35 32" src="https://github.com/FelixFern/React-Starter-Project/assets/28957554/0547b4e5-be4b-46bf-824b-4a89dc276b76"/>
 
@@ -37,34 +36,40 @@ or, you can directly clone this repository using this command,
 git clone https://github.com/FelixFern/React-Starter-Project
 ```
 
-2. Then, install all the needed dependencies using your desired package manager, 
+2. Then, install all the needed dependencies using your desired package manager,
+
 ```
 pnpm install
 ```
 
-3. After that, you can start using this template and edit as you like! and to start the project use 
+3. After that, you can start using this template and edit as you like! and to start the project use
+
 ```
 pnpm run dev
 ```
 
-## 🟩 Examples Included 
+## 🟩 Examples Included
+
 1. Fetching Data Example ✅
 2. Data Pagination Example ✅
 3. Routing ✅
 4. Tanstack Router Params Usage ✅
 5. Custom Hooks ✅
+6. Biome.js for Linter ✅
 
-## 🟧 Next Improvement 
+## 🟧 Next Improvement
+
 1. JWT Auth Session Hooks
-2. Replace ESLint with BiomeJS
-3. Data Table Example
-4. Form Example
-5. Tanstack Path Params Usage
+2. Data Table Example
+3. Form Example
+4. Tanstack Path Params Usage
 
 If you have any inputs or suggestions, add them as an [Issues](https://github.com/FelixFern/React-Starter-Project/issues) and we'll discuss them!
 
 ## 🗒️ Credits
+
 [Pokemon APIs](https://pokeapi.co/) by Paul Hallet (used for data fetching example)
 
-## 🙎‍♂️ Maintained by 
+## 🙎‍♂️ Maintained by
+
 - @Felix Fernando | [Github](https://github.com/FelixFern) | [LinkedIn](https://www.linkedin.com/in/felix-fern/)
