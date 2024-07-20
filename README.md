@@ -14,6 +14,7 @@ This template provides a minimal setup to get React working in Vite to build you
 ## Pre-requisite
 
 - Node.js v18.16 and up with package manager (npm, yarn, or pnpm)
+- Biome.js VSC Extension (for VS Code User)
 
 ## Dependencies Used
 
