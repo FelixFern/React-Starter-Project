@@ -1,0 +1,32 @@
+name: Biome.js Lint
+
+on:
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install Dependencies
+        run: pnpm
+
+      - name: Run Linter
+        run: pnpm lint
