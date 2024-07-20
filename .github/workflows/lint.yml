@@ -23,7 +23,7 @@ jobs:
           node-version: "18"
 
       - name: Install Dependencies
-        run: npm
+        run: npm install
 
       - name: Run Linter
         run: npm lint
