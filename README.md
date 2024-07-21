@@ -49,7 +49,7 @@ pnpm install
 pnpm run dev
 ```
 
-## 🟩 Examples Included
+## 🟩 Features / Examples Included 
 
 1. Fetching Data Example ✅
 2. Data Pagination Example ✅
