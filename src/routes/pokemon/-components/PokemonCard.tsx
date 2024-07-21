@@ -1,13 +1,17 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
 import { capitalizeString, cn, mapTypeColor } from '@/lib/utils';
 import { GetAllPokemonData } from '@/types';
 import { useState } from 'react';
 import { usePokemonDetailData } from '../-hooks/usePokemonDetailData';
+import CardLoading from './CardLoading';
 
 const PokemonCard = ({ name }: GetAllPokemonData) => {
 	const { data, isLoading } = usePokemonDetailData({ name });
 	const [hovered, setHovered] = useState(false);
+
+	if (isLoading) {
+		return <CardLoading />;
+	}
 
 	return (
 		<Card
@@ -17,19 +21,15 @@ const PokemonCard = ({ name }: GetAllPokemonData) => {
 		>
 			<CardHeader>
 				<div className='flex items-center justify-center'>
-					{isLoading ? (
-						<Skeleton className='h-[128px] aspect-square' />
-					) : (
-						<img
-							src={
-								hovered
-									? data?.sprites.front_shiny
-									: data?.sprites.front_default
-							}
-							alt={data?.name}
-							className='w-[128px] aspect-square  duration-100 opacity-100'
-						/>
-					)}
+					<img
+						src={
+							hovered
+								? data?.sprites.front_shiny
+								: data?.sprites.front_default
+						}
+						alt={data?.name}
+						className='w-[128px] aspect-square  duration-100 opacity-100'
+					/>
 				</div>
 			</CardHeader>
 			<CardContent>
