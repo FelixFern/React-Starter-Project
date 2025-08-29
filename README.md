@@ -49,7 +49,7 @@ pnpm install
 pnpm run dev
 ```
 
-## 🟩 Features / Examples Included 
+## 🟩 Features / Examples Included
 
 1. Fetching Data Example ✅
 2. Data Pagination Example ✅
@@ -58,6 +58,7 @@ pnpm run dev
 5. Custom Hooks ✅
 6. Biome.js for Linter ✅
 7. CI for Linter with Github Actions ✅
+8. Pre-commit Hooks
 
 ## 🟧 Next Improvement
 
